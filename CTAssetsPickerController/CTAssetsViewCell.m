@@ -175,7 +175,8 @@ static UIColor *disabledColor;
     CGContextSetFillColorWithColor(context, selectedColor.CGColor);
     CGContextFillRect(context, rect);
     
-    [checkedIcon drawAtPoint:CGPointMake(CGRectGetMaxX(rect) - checkedIcon.size.width, CGRectGetMinY(rect))];
+    [checkedIcon drawAtPoint:CGPointMake(CGRectGetMaxX(rect) - checkedIcon.size.width,
+                                         CGRectGetMaxY(rect) - checkedIcon.size.height)];
 }
 
 
