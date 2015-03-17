@@ -201,14 +201,14 @@ NSString * const CTAssetsSupplementaryViewIdentifier = @"CTAssetsSupplementaryVi
     if (UIInterfaceOrientationIsLandscape(orientation) && (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad))
     {
         layout.sectionInset            = UIEdgeInsetsMake(9.0, 2.0, 0, 2.0);
-        layout.minimumInteritemSpacing = (CTIPhone6Plus) ? 1.0 : ( (CTIPhone6) ? 2.0 : 3.0 );
-        layout.minimumLineSpacing      = (CTIPhone6Plus) ? 1.0 : ( (CTIPhone6) ? 2.0 : 3.0 );
+        layout.minimumInteritemSpacing = 1;
+        layout.minimumLineSpacing      = 1;
     }
     else
     {
         layout.sectionInset            = UIEdgeInsetsMake(9.0, 0, 0, 0);
-        layout.minimumInteritemSpacing = (CTIPhone6Plus) ? 0.5 : ( (CTIPhone6) ? 1.0 : 2.0 );
-        layout.minimumLineSpacing      = (CTIPhone6Plus) ? 0.5 : ( (CTIPhone6) ? 1.0 : 2.0 );
+        layout.minimumInteritemSpacing = 1;
+        layout.minimumLineSpacing      = 1;
     }
     
     return layout;
