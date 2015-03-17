@@ -27,9 +27,11 @@
 
 #define CTScreenSize [[UIScreen mainScreen] bounds].size
 #define CTScreenHeight MAX(CTScreenSize.width, CTScreenSize.height)
+#define CTIPhone4 (CTScreenHeight == 480)
 #define CTIPhone6 (CTScreenHeight == 667)
 #define CTIPhone6Plus (CTScreenHeight == 736)
+#define CTIPad (CTScreenHeight == 1024)
 
-#define CTAssetThumbnailLength (CTIPhone6Plus) ? 103.0f : ( (CTIPhone6) ? 93.0f : 78.0f )
+#define CTAssetThumbnailLength (CTIPad) ? 103.0 : (CTIPhone6Plus) ? 102.75f : ( (CTIPhone6) ? 93.0f : (CTIPhone4) ? 78.0 : 79.25f )
 #define CTAssetThumbnailSize CGSizeMake(CTAssetThumbnailLength, CTAssetThumbnailLength)
-#define CTAssetPickerPopoverContentSize CGSizeMake(320, 480)
+#define CTAssetPickerPopoverContentSize CGSizeMake(415, 600)
